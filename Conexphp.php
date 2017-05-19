@@ -1,10 +1,8 @@
 <?php
 $con=mysqli_connect("localhost", "root", "", "js");
 if ($con)
-		echo "Aqui vamos";
+		
 	$queryu="SELECT * FROM USUARIO";
-	$queryc="SELECT * FROM COMENTARIO";
-	$queryp="SELECT * FROM PUBLICACION";
 	$res=mysqli_query ($con, $queryu);
 	$fila=mysqli_fetch_assoc($res);
 	print_r ($fila);
@@ -16,6 +14,8 @@ if ($con)
 		echo "<br/>";
 		$fila=mysqli_fetch_assoc($res);
 	}
+
+	$queryc="SELECT * FROM COMENTARIO";
 	$resc=mysqli_query ($con, $queryc);
 	$filac=mysqli_fetch_assoc($resc);
 	print_r ($filac);
@@ -29,6 +29,8 @@ if ($con)
 		echo "<br/>";
 		$filac=mysqli_fetch_assoc($resc);
 	}
+
+	$queryp="SELECT * FROM PUBLICACION";
 	$resp=mysqli_query ($con, $queryp);
 	$filap=mysqli_fetch_assoc($resp);
 	print_r ($filap);
