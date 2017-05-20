@@ -1,4 +1,5 @@
 <?php
+$alfa=$_POST["alfa"];
 $con=mysqli_connect("localhost", "root", "", "js");
 if ($con)
 
@@ -6,11 +7,12 @@ if ($con)
 	$resc=mysqli_query ($con, $queryc);
 	$filac=mysqli_fetch_assoc($resc);
 
-	while($filac)
-	{
+	for ($beta=0; $beta < $alfa; $beta++)
+			$filac=mysqli_fetch_assoc($resc);
+
+	if($filac)
 		echo $filac['id_comentario'].",".$filac['id_publicacion'].",".$filac['id_usuario'].",".$filac['texto_comentario'].",".$filac['tiempo_comentario'].",";
 
-		$filac=mysqli_fetch_assoc($resc);
-	}
+
 
 ?>
