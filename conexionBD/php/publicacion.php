@@ -2,7 +2,7 @@
 $con=mysqli_connect("localhost", "root", "", "js");
 if ($con)
 
-	$queryp="SELECT * FROM PUBLICACION";
+	$queryp="SELECT * FROM publicacion";
 	$resp=mysqli_query ($con, $queryp);
 	$filap=mysqli_fetch_assoc($resp);
 

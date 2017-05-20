@@ -1,11 +1,11 @@
-var a='aaaa';
+var vector=new Array();
 
 function usuario() {
 	$.ajax({
                 url:   '../conexionBD/php/usuario.php',
                 type:  'get',
                 success:  function (response) {
-                       console.log(response);
+                      console.log(response);
                 }
         });
 }
@@ -14,12 +14,8 @@ function comentario() {
                 url:   '../conexionBD/php/comentario.php',
                 type:  'get',
                 success:  function (response) {
-                     return response;
+
                 },
-                /*complete: function (data) {
-                	console.log(a);
-                	return a;
-                }*/
         });
 }
 function publicacion() {
@@ -31,3 +27,4 @@ function publicacion() {
                 }
         });
 }
+usuario();
