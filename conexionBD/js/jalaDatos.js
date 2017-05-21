@@ -50,5 +50,3 @@ function publicacion() {
 				}
 }
 //es necesario llamar las funciones una vez para evitar que la primera vez te marque undefined (parece no ser necesario para publicacion y siendo sincero no se porqu pero funciona);
-usuario();
-comentario();
