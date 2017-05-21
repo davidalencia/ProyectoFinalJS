@@ -1,5 +1,4 @@
 <?php
-$alfa=$_POST["alfa"];
 $con=mysqli_connect("localhost", "root", "", "js");
 if ($con)
 
@@ -7,12 +6,9 @@ if ($con)
 	$res=mysqli_query ($con, $queryu);
 	$fila=mysqli_fetch_assoc($res);
 
-	for ($beta=0; $beta < $alfa; $beta++)
+	while($fila){
+		echo $fila['id_usuario'].",".$fila['nombre_usuario'].",".$fila['password'].",";
 		$fila=mysqli_fetch_assoc($res);
-
-	if($fila)
-		echo $fila['id_usuario'].",".$fila['nombre_usuario'].",".$fila['password'];
-
-
+	}
 
 ?>
