@@ -1,22 +1,7 @@
 var vector=new Array();//aqui se guarda cada informacion en su celda
 var info;//donde se va a guardar lo que regresa el php
-var usu=0, comen=0, publi=0;//lleva la cuenta de en linea/fila de la tabla va
-var infoUsu= new Array();
+var comen=0, publi=0;//lleva la cuenta de en linea/fila de la tabla va
 
-//funciones recoger la informacion
-function usuario() {
-	$.ajax({
-                url:   '../conexionBD/php/usuario.php',
-                type:  'post',
-                success:  function (response) {
-											info=response;
-                }
-        });
-				usu++;
-				if ((typeof info!== "undefined")&&info!='' ) {
-					infoUsu=info.split(",");
-				}
-}
 function comentario() {
 	$.ajax({
                 url:   '../conexionBD/php/comentario.php',
@@ -43,7 +28,7 @@ function publicacion() {
         });
 				publi++;
 				if ((typeof info!== "undefined")&&info!=''  ) {
-					vector=info.split(",");
+					vector=info.split("*");
 				}
 		return vector;
 }

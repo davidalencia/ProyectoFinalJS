@@ -23,21 +23,22 @@
   <div id='publicaciones'>
 
 </div>
-  <button id='mas' onclick="masP();">mass</buton>
+  <button id='mas' onclick="masP();" class='waves-effect waves-light btn'>mass</buton>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="materialize/js/materialize.js"></script>
     <script type="text/javascript" src='../conexionBD/js/jalaDatos.js'></script>
+    <script type="text/javascript" src='../conexionBD/js/masDatos.js'></script>
     <script type="text/javascript">
-	var publ=["hola mundo", "blabla", "nfafafasfsihfashfiahfuhfuahfahf"];
+
   var a;
-  usuario();
+  var nombreUsu=false;
+  alert("bienvenido");
   publicacion();
 function masP() {
-  usuario();
   publicacion();
 
-  a=$('<div id ="p1 "class="container"><div id="p2" class="row"><div id="p3" class="card cyan col l5 m6 s12"><div id="p4" class="card-content center-align col l12 m12 s12"><span class="card-title">Publicacion</div><div id="p5" class="row"><div id="publica"  align="center" class="col s12 m12 l12"><p>'+vector[2]+'</p></div><br/><div id="p6"  align="center" class="col s12 m12 l12"><p>comentario</p></div></div></div></div></div>');
+  a=$('<div id ="p1 "class="container"><div id="p2" class="row"><div id="p3" class="card cyan col l5 m6 s12"><div id="p4" class="card-content center-align col l12 m12 s12"><span class="card-title">'+vector[1]+'</div><div id="p5" class="row"><div id="publica"  align="center" class="col s12 m12 l12"><p>'+vector[0]+'</p></div><br/><div id="p6"  align="center" class="col s12 m12 l12"><p>'+vector[2]+'</p></div></div></div></div></div>');
   $("#publicaciones").append(a);
 }
 
