@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Materialize | Offsets </title>
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="../materialize/css/materialize.css"  media="screen,projection"/>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<script type="text/javascript" src='../jquery/jquery-3.2.1.min.js'></script>
+    </head>
+	<body id="bd">
+	<nav>
+        <div class="nav-wrapper blue lighten-2 row">
+        	<div class="col s12 l12 m12">
+           		<a href="./" class="brand-logo center-align"> Urban Jungle </a>
+            	<ul class="right hide-on-med-and-down">
+            	</ul>
+            </div>
+        </div>
+    </nav>
+	<div class="container">
+     <div class="row">
+	 <div class="card cyan col l5 m6 s12">
+	 <div class="card-content center-align col l12 m12 s12">
+		<span class="card-title">Contactos</div>
+		<div class="row">
+		<div  align="center" class="col s12 m12 l12"><p>Blabla</p></div><br/>
+		<div  align="center" class="col s12 m12 l12"><p>Comentario</p></div>
+    </div>
+    </div>
+	</div>
+	</div>
+	<div id ="p1 "class="container">
+     <div id="p2" class="row">
+	 <div id="p3" class="card cyan col l5 m6 s12">
+	 <div id="p4" class="card-content center-align col l12 m12 s12">
+		<span class="card-title">Publicacion</div>
+		<div id="p5" class="row">
+		<div id="publica"  align="center" class="col s12 m12 l12"><p>Blabla</p></div><br/>
+		<div id="p6"  align="center" class="col s12 m12 l12"><p>Comentario</p></div>
+    </div>
+    </div>
+	</div>
+	</div>
+    </body>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../materialize/js/materialize.js"></script>
+    <script type="text/javascript">
+	var publi=["hola mundo", "blabla", "nfafafasfsihfashfiahfuhfuahfahf"];
+	//for(i=0; i<=1; i++)
+	//{
+		$("#p1").clone().appendTo("#bd");
+		$("#p2").clone().appendTo("#bd");
+		//$("#p4").clone().appendTo("#bd");
+		//$("#p5").clone().appendTo("#bd");
+		$("#publica").clone().appendTo("#bd").html(publi[2]);
+		//$("#p6").clone().appendTo("#bd");*/
+	
+		//	}
+	
+	</script>
+</html>
